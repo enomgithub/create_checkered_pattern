@@ -28,7 +28,7 @@ proc main(
 ): cint =
   echo "output: ", outputPath, ", config: ", configPath
 
-  if not os.existsFile(configPath):
+  if not os.fileExists(configPath):
     return 1
 
   let configJSON = json.parseFile(configPath)
